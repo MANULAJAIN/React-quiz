@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "question": "What is React?",
+        "options": [
+            "A Javascript library",
+            "A database",
+            "An operating system",
+            "A programming language"
+        ],
+        "answer": "A Javascript library"
+    },
+    {
+        "id": 2,
+        "question": "Which hook is used to manage state?",
+        "options": [
+            "useEffect",
+            "useState",
+            "useRef",
+            "useContext"
+        ],
+        "answer": "useState"
+    },
+    {
+        "id": 3,
+        "question": "Which method is used to render lists in React?",
+        "options": [
+            "filter()",
+            "reduce()",
+            "map()",
+            "find()"
+        ],
+        "answer": "map()"
+    },
+    {
+        "id": 4,
+        "question": "What is JSX?",
+        "options": [
+            "A database query",
+            "A syntax extension for JavaScript",
+            "A CSS framework",
+            "A web server"
+        ],
+        "answer": "A syntax extension for JavaScript"
+    },
+    {
+        "id": 5,
+        "question": "Which hook can access DOM element directly?",
+        "options": [
+            "useEffect",
+            "useState",
+            "useRef",
+            "useMemo"
+        ],
+        "answer": "useRef"
+    },
+    {
+        "id": 6,
+        "question": "What are props used for in React?",
+        "options": [
+            "Styling components",
+            "Passing data between components",
+            "Creating databases",
+            "Running CSS"
+        ],
+        "answer": "Passing data between components"
+    },
+    {
+        "id": 7,
+        "question": "Which hook is used to handle side effects?",
+        "options": [
+            "useEffect",
+            "useState",
+            "useRef",
+            "useId"
+        ],
+        "answer": "useEffect"
+    },
+    {
+        "id": 8,
+        "question": "How should React state be updated?",
+        "options": [
+            "By directly modifying the variable",
+            "Using the state setter function",
+            "Using document.write()",
+            "Using console.log()"
+        ],
+        "answer": "Using the state setter function"
+    },
+    {
+        "id": 9,
+        "question": "What is a React Fragment used for?",
+        "options": [
+            "Creating a database",
+            "Grouping elements without an extra DOM element",
+            "Adding CSS files",
+            "Connecting to a server"
+        ],
+        "answer": "Grouping elements without an extra DOM element"
+    },
+    {
+        "id": 10,
+        "question": "Which command starts development server?",
+        "options": [
+            "npm run build",
+            "npm run dev",
+            "npm install react",
+            "node install"
+        ],
+        "answer": "npm run dev"
+    }
+]
