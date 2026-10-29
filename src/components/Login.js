@@ -1,6 +1,10 @@
 
 import { useState } from "react";
 import "../Login.css";
+import { Link } from "react-router-dom";
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from "jwt-decode";
+import { useNavigate } from "react-router-dom";
 
 export default function Login({ onLogin }) {
     const [email, setEmail] = useState("");
@@ -8,6 +12,8 @@ export default function Login({ onLogin }) {
     const [showPassword, setShowPassword] = useState(false);
     const [remember, setRemember] = useState(false);
     const [error, setError] = useState("");
+
+    const navigate = useNavigate();
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -19,6 +25,14 @@ export default function Login({ onLogin }) {
 
         setError("");
         onLogin();
+    }
+
+    function setuser(user) {
+        const name = user.name;
+        localStorage.setItem("user", name);
+        navigate("/");
+
+
     }
 
     return (
@@ -37,6 +51,23 @@ export default function Login({ onLogin }) {
                 {/* Right login card */}
                 <div className="login-card">
 
+                    <GoogleOAuthProvider clientId="534504614984-7jfr4s72csu3b14mu9nbtmcbkjn62r45.apps.googleusercontent.com">
+                        <GoogleLogin
+                            onSuccess={credentialResponse => {
+                                console.log(credentialResponse);
+                                const token = credentialResponse.credential;
+                                const res = jwtDecode(token);
+
+                                console.log(res);
+                                setuser(res);
+
+                            }} tial
+                            onError={() => {
+                                console.log('Login Failed');
+                            }}
+                        />;
+
+                    </GoogleOAuthProvider>
                     <div className="login-icon">
                         <i className="bi bi-mortarboard-fill"></i>
                     </div>
@@ -136,7 +167,10 @@ export default function Login({ onLogin }) {
                         )}
 
                         <button type="submit" className="login-button">
-                            Login
+
+                            <Link to="/" className="login-link">
+                                <span className="login-link-text">Start Quiz</span>
+                            </Link>
                             <i className="bi bi-arrow-right"></i>
                         </button>
 

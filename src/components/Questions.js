@@ -7,6 +7,8 @@ export default function Questions() {
     const [answers, setAnswers] = useState([]);
     const [timeLeft, setTimeLeft] = useState(2 * 60);
 
+    const [username, setUsername] = useState(localStorage.getItem("user") || "");
+
     useEffect(() => {
         if (timeLeft <= 0) {
             submitQuiz();
@@ -81,6 +83,9 @@ export default function Questions() {
 
 
         <div class="card text-center" style={{ maxWidth: '500px' }}>
+
+            {username && <p>Welcome, {username}!</p>}
+
             <div class="card-header">
                 React Quiz
 

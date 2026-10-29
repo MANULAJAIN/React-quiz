@@ -1,0 +1,22 @@
+[
+    {
+        "userid": 1,
+        "email": "user1@gmail.com"
+    },
+    {
+        "userid": 2,
+        "email": "user2@gmail.com"
+    },
+    {
+        "userid": 3,
+        "email": "user3@gmail.com"
+    },
+    {
+        "userid": 4,
+        "email": "user4@gmail.com"
+    },
+    {
+        "userid": 5,
+        "email": "user5@gmail.com"
+    }
+]
